@@ -1,0 +1,21 @@
+- implement UNION-FIND with rooted trees
+
+Tech:
+
+- searchGraph like predeccessor sub graph
+- search algorithms factory
+- add InducedSubGraph
+- add support for half edges
+
+algorithms:
+- all pairs shortest path
+- flow networks
+
+detection:
+- regular graph detection algorithms
+- euler cycle detection- 
+- complete graph
+
+utilities:
+- findVertexByTag, findEdgeByTag,
+
