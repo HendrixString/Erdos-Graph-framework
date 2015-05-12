@@ -1,12 +1,10 @@
 package com.hendrix.graph;
 
-import com.hendrix.graph.algorithms.Undirected;
 import com.hendrix.graph.graphs.AbstractGraph;
 import com.hendrix.graph.graphs.DirectedGraph;
 import com.hendrix.graph.graphs.IGraph;
 import com.hendrix.graph.graphs.UndirectedGraph;
 import com.hendrix.graph.graphs.engines.IGraphEngine;
-import com.hendrix.graph.types.Edge;
 import com.hendrix.graph.types.Edge.*;
 
 /**
