@@ -11,69 +11,68 @@ import java.util.HashSet;
  */
 public class NaiveUnionFind<T extends ImmutableHashCode> implements IUnionFind<T>
 {
-  private ArrayList<HashSet<T>>  _sets       = null;
-  private HashMap<T, HashSet<T>> _mapMembers = null;
+    private ArrayList<HashSet<T>>  _sets       = null;
+    private HashMap<T, HashSet<T>> _mapMembers = null;
 
-  public NaiveUnionFind() {
+    public NaiveUnionFind() {
 
-    _sets       = new ArrayList<>();
-    _mapMembers = new HashMap<>();
-  }
-
-  public ArrayList<HashSet<T>> getDisjointSets()
-  {
-    ArrayList<HashSet<T>> arrResult = new ArrayList<>();
-
-    for (HashSet<T> set : _sets) {
-      if(set.size() != 0)
-        arrResult.add(set);
+        _sets       = new ArrayList<>();
+        _mapMembers = new HashMap<>();
     }
 
-    return arrResult;
-  }
+    public ArrayList<HashSet<T>> getDisjointSets()
+    {
+        ArrayList<HashSet<T>> arrResult = new ArrayList<>();
 
-  public void UNION(T member1, T member2)
-  {
-    HashSet<T> setMember1 = validateGetMemberSet(member1);
-    HashSet<T> setMember2 = validateGetMemberSet(member2);
+        for (HashSet<T> set : _sets) {
+            if(set.size() != 0)
+                arrResult.add(set);
+        }
 
-    for (T t : setMember2) {
-      _mapMembers.put(t, setMember1);
+        return arrResult;
     }
 
-    setMember1.addAll(setMember2);
+    public void UNION(T member1, T member2)
+    {
+        HashSet<T> setMember1 = validateGetMemberSet(member1);
+        HashSet<T> setMember2 = validateGetMemberSet(member2);
 
+        for (T t : setMember2) {
+            _mapMembers.put(t, setMember1);
+        }
 
-    setMember2.clear();
-  }
+        setMember1.addAll(setMember2);
 
-  public void MAKESET(T member)
-  {
-    if(_mapMembers.containsKey(member))
-      return;
+        setMember2.clear();
+    }
 
-    HashSet<T> setNew = new HashSet<>();
+    public void MAKESET(T member)
+    {
+        if(_mapMembers.containsKey(member))
+            return;
 
-    setNew.add(member);
+        HashSet<T> setNew = new HashSet<>();
 
-    _mapMembers.put(member, setNew);
+        setNew.add(member);
 
-    _sets.add(setNew);
-  }
+        _mapMembers.put(member, setNew);
 
-  public HashSet<T> FINDSET(T member)
-  {
-    return validateGetMemberSet(member);
-  }
+        _sets.add(setNew);
+    }
 
-  protected HashSet<T> validateGetMemberSet(T member)
-  {
-    HashSet<T> setMember = _mapMembers.get(member);
+    public HashSet<T> FINDSET(T member)
+    {
+        return validateGetMemberSet(member);
+    }
 
-    if(setMember == null)
-      throw new Error("UnionFind error:: member does not belong to any set");
+    protected HashSet<T> validateGetMemberSet(T member)
+    {
+        HashSet<T> setMember = _mapMembers.get(member);
 
-    return setMember;
-  }
+        if(setMember == null)
+            throw new Error("UnionFind error:: member does not belong to any set");
+
+        return setMember;
+    }
 
 }

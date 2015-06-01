@@ -14,10 +14,12 @@ import com.hendrix.graph.algorithms.TopologicalSort;
 import com.hendrix.graph.algorithms.TransitiveClosure;
 import com.hendrix.graph.algorithms.factories.AllPairsShortPathFactory;
 import com.hendrix.graph.exceptions.AlgorithmException;
+import com.hendrix.graph.graphs.AbstractGraph;
 import com.hendrix.graph.graphs.IDirectedGraph;
 import com.hendrix.graph.graphs.SimpleDirectedGraph;
 import com.hendrix.graph.graphs.SimpleGraph;
 import com.hendrix.graph.graphs.UndirectedGraph;
+import com.hendrix.graph.graphs.engines.AdjIncidenceGraphEngine;
 import com.hendrix.graph.types.DirectedEdge;
 import com.hendrix.graph.types.IVertex;
 import com.hendrix.graph.types.Edge;
@@ -39,6 +41,8 @@ public class GraphTests {
     private IVertex _v0;
 
     public GraphTests() {
+        AbstractGraph ag = Graph.newGraphWithEngine(new AdjIncidenceGraphEngine(), Edge.EDGE_DIRECTION.DIRECTED, false, false);
+
         //generalTest();
         //mst();
         //BellmanFord();

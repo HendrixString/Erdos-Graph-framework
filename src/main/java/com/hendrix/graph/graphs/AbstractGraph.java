@@ -74,6 +74,7 @@ abstract public class AbstractGraph implements IGraph {
      * get the accessible vertex neighbors of vertex v1
      *
      * @param vertex the vertex
+     *
      * @return the neighbors
      */
     @Override
@@ -85,6 +86,7 @@ abstract public class AbstractGraph implements IGraph {
      * get the list of incident edges that go out from vertex
      *
      * @param vertex the vertex
+     *
      * @return the out incidence list of vertex
      */
     @Override
@@ -96,6 +98,7 @@ abstract public class AbstractGraph implements IGraph {
      * get the list of incident edges that go into the vertex
      *
      * @param vertex the vertex
+     *
      * @return the in incidence list of vertex
      */
     @Override
@@ -107,6 +110,7 @@ abstract public class AbstractGraph implements IGraph {
      * check whether <code>vertex</code> belongs to the graph's vertex list
      *
      * @param vertex the vertex in question
+     *
      * @return true if graph contains this vertex
      */
     @Override
@@ -118,6 +122,7 @@ abstract public class AbstractGraph implements IGraph {
      * add <code>vertex</code> into the graph
      *
      * @param vertex the vertex to add
+     *
      * @return true if success
      */
     @Override
@@ -140,6 +145,7 @@ abstract public class AbstractGraph implements IGraph {
      * remove <code>vertex</code> from the graph
      *
      * @param vertex the vertex to remove
+     *
      * @return true if success
      */
     @Override
@@ -152,6 +158,7 @@ abstract public class AbstractGraph implements IGraph {
      *
      * @param v1 vertex v1
      * @param v2 vertex v2
+     *
      * @return true if graph contains this edge
      */
     @Override
@@ -163,6 +170,7 @@ abstract public class AbstractGraph implements IGraph {
      * check whether edge instance is in graph
      *
      * @param edge the edge in question
+     *
      * @return true if graph contains this edge
      */
     @Override
@@ -175,6 +183,7 @@ abstract public class AbstractGraph implements IGraph {
      *
      * @param v1 a vertex that already belong to the graph
      * @param v2 a vertex that already belong to the graph
+     *
      * @return the edge so use can query the id
      */
     @Override
@@ -186,6 +195,7 @@ abstract public class AbstractGraph implements IGraph {
      * connect an edge (v1, v2) into the graph, v1 and v2 have to be members
      *
      * @param edge the edge to add
+     *
      * @return the edge so use can query the id
      */
     @Override
@@ -198,6 +208,7 @@ abstract public class AbstractGraph implements IGraph {
      *
      * @param v1 a vertex that already belong to the graph
      * @param v2 a vertex that already belong to the graph
+     *
      * @return the edge if success, or null if failed
      */
     @Override
@@ -210,6 +221,7 @@ abstract public class AbstractGraph implements IGraph {
      *
      * @param v1 a vertex that already belong to the graph
      * @param v2 a vertex that already belong to the graph
+     *
      * @return the edge if success, or null if failed
      */
     @Override
@@ -221,6 +233,7 @@ abstract public class AbstractGraph implements IGraph {
      * remove edge (v1, v2) from the graph
      *
      * @param edge an edge that already belong to the graph
+     *
      * @return the edge if success, or null if failed
      */
     @Override
