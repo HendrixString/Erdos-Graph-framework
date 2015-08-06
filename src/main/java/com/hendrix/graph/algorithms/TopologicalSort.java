@@ -17,8 +17,15 @@ public class TopologicalSort extends GraphAlgorithm<LinkedList<IVertex>, IDirect
         super(graph_input, "TopologicalSort");
     }
 
+
+    /**
+     *
+     * @return a {@code LinkedList} that represents the {@code topological order}.
+     *
+     * @throws NotDirectedAcyclicGraphException if there are cycles
+     */
     @Override
-    public LinkedList<IVertex> applyAlgorithm() {
+    public LinkedList<IVertex> applyAlgorithm() throws NotDirectedAcyclicGraphException{
         if(_graph_input==null)
             throw new AlgorithmException("_graph_input==null", this);
 

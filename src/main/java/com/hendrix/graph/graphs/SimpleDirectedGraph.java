@@ -4,7 +4,8 @@ import com.hendrix.graph.graphs.engines.AdjIncidenceGraphEngine;
 import com.hendrix.graph.graphs.engines.IGraphEngine;
 
 /**
- * undirected multi graph
+ * Directed simple graph
+ *
  * @author Tomer Shalev
  */
 public class SimpleDirectedGraph extends DirectedGraph {

@@ -1,10 +1,11 @@
 package com.hendrix.graph.graphs;
 
-import com.hendrix.graph.graphs.engines.AdjIncidenceGraphEngine;
 import com.hendrix.graph.types.IVertex;
 import com.hendrix.graph.types.Edge;
 
 /**
+ * an abstract {@link IDirectedGraph}
+ *
  * @author Tomer Shalev
  */
 abstract public class DirectedGraph extends AbstractGraph implements IDirectedGraph {
