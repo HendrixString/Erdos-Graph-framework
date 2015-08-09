@@ -1,8 +1,6 @@
-package com.hendrix;
+package com.hendrix.test;
 
-import com.hendrix.graph.Graph;
-import com.hendrix.graph.GraphTests;
-import com.hendrix.graph.types.Vertex;
+import com.hendrix.test.GraphTests;
 
 public class Main
 {

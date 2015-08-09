@@ -1,6 +1,6 @@
 package com.hendrix.graph.algorithms;
 
-import com.hendrix.graph.Graph;
+import com.hendrix.graph.Erdos;
 import com.hendrix.graph.algorithms.factories.SingleSourceShortPathFactory;
 import com.hendrix.graph.exceptions.NegativeEdgeWeightException;
 import com.hendrix.graph.graphs.DirectedGraph;
@@ -83,7 +83,7 @@ public class Johnson extends GraphAlgorithm<AllPairsShortPathResult, IDirectedGr
         Vertex s                    = new Vertex();
         s.setTag("s");
 
-        DirectedGraph G_cap                = (DirectedGraph)Graph.cloneGraphOf(_graph_input);
+        DirectedGraph G_cap                = (DirectedGraph) Erdos.cloneGraphOf(_graph_input);
 
         G_cap.addVertex(s);
 

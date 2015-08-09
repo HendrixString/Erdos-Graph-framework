@@ -1,5 +1,6 @@
-package com.hendrix.graph;
+package com.hendrix.test;
 
+import com.hendrix.graph.Erdos;
 import com.hendrix.graph.algorithms.AllPairsShortPathResult;
 import com.hendrix.graph.algorithms.BFS;
 import com.hendrix.graph.algorithms.BellmanFordShortestPath;
@@ -41,7 +42,7 @@ public class GraphTests {
     private IVertex _v0;
 
     public GraphTests() {
-        AbstractGraph ag = Graph.newGraphWithEngine(new AdjIncidenceGraphEngine(), Edge.EDGE_DIRECTION.DIRECTED, false, false);
+        AbstractGraph ag = Erdos.newGraphWithEngine(new AdjIncidenceGraphEngine(), Edge.EDGE_DIRECTION.DIRECTED, false, false);
 
         //generalTest();
         //mst();

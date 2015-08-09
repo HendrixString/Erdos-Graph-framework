@@ -17,8 +17,8 @@ import com.hendrix.graph.types.Edge.*;
  * @see com.hendrix.graph.graphs.DirectedGraph
  * @see com.hendrix.graph.graphs.UndirectedGraph
  */
-public class Graph {
-    private Graph() {}
+public class Erdos {
+    private Erdos() {}
 
     /**
      * clone empty graph with the same characteristics (graph engine, multi edge support, self loops supprt)

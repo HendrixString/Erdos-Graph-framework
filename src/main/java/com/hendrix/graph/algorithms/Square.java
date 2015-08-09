@@ -1,6 +1,6 @@
 package com.hendrix.graph.algorithms;
 
-import com.hendrix.graph.Graph;
+import com.hendrix.graph.Erdos;
 import com.hendrix.graph.exceptions.AlgorithmException;
 import com.hendrix.graph.graphs.AbstractGraph;
 import com.hendrix.graph.graphs.IGraph;
@@ -31,7 +31,7 @@ public class Square extends GraphAlgorithm<AbstractGraph, IGraph> {
 
     protected void square()
     {
-        _result_algorithm = Graph.cloneEmptyGraphOf(_graph_input);
+        _result_algorithm = Erdos.cloneEmptyGraphOf(_graph_input);
 
         // fill the graph V
 
